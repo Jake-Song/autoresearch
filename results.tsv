@@ -1,1 +1,16 @@
 commit	val_bpb	memory_gb	status	description
+d31d8a1	0.998862	44.0	keep	baseline
+4f1116b	1.004509	66.5	discard	increase depth from 8 to 10
+307768b	0.989382	43.9	keep	reduce batch size to 2^18 for more optimizer steps
+5f405c4	0.000000	0.0	crash	reduce batch to 2^17 (assertion error: batch < micro-batch)
+7cdecc8	0.996129	22.2	discard	reduce batch to 2^17 with device_batch=64
+24e1ebf	0.994472	43.9	discard	increase MATRIX_LR from 0.04 to 0.06
+8510ad2	0.989436	43.9	discard	reduce MATRIX_LR from 0.04 to 0.03
+dd998df	0.989144	43.9	keep	increase WARMDOWN_RATIO from 0.5 to 0.67
+c0f6c54	0.988845	43.9	keep	increase WARMDOWN_RATIO from 0.67 to 0.8
+a227b87	0.989822	43.9	discard	add 5% warmup ratio
+478cf6f	0.990311	44.4	discard	replace ReLU^2 MLP with SwiGLU
+1a43770	0.989702	43.9	discard	increase EMBEDDING_LR from 0.6 to 1.0
+6a56c94	0.992530	43.9	discard	increase WEIGHT_DECAY from 0.2 to 0.4
+ea363ce	0.990025	43.9	discard	change window pattern to all full attention (L)
+39fe79d	0.993600	43.9	discard	increase softcap from 15 to 30
